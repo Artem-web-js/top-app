@@ -5,7 +5,7 @@ import styles from "./Rating.module.css";
 import cn from "classnames";
 
 export const Rating = ({isEditable = false, rating, setRating, className, ...rest}: RatingProps) => {
-  const [ratingArray, setRqtingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
+  const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
 
   useEffect(() => {
     constructRating(rating);
@@ -34,7 +34,7 @@ export const Rating = ({isEditable = false, rating, setRating, className, ...res
         </span>
       );
     });
-    setRqtingArray(updatedArray);
+    setRatingArray(updatedArray);
   };
 
   const changeDisplay = (i: number) => {
