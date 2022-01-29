@@ -9,3 +9,7 @@ export const firstLevelMenu: FirstLevelMenuItem[] = [
   { id: TopLevelCategory.Books, name: 'Книги', route: 'books', icon: <BooksIcon /> },
   { id: TopLevelCategory.Products, name: 'Продукты', route: 'products', icon: <ProductsIcon /> },
 ];
+
+export const digitSeparator = (price: number) => (
+  price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+);
