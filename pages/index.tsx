@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import type { GetStaticProps } from 'next';
 import axios from "axios";
 
-import { Button, Htag, Ptag, Tag } from '../components';
+import {Button, Htag, Input, Ptag, Tag, TextArea} from '../components';
 import { Rating } from "../components/Rating/Rating";
 import { withLayout } from "../layout/Layout";
 import { MenuItem } from "../interfaces/menu.interface";
@@ -21,9 +21,11 @@ const Home = ({ menu }: HomeProps): JSX.Element => {
       <Tag color="ghost" size="s">test</Tag>
       <Tag color="primary" size="s">test</Tag>
       <Tag color="green" size="m">test</Tag>
-      <Tag color="grey" size="s">test</Tag>
+      <Tag color="gray" size="s">test</Tag>
       <Tag color="red" size="m" href="https://www.youtube.com/">YouTube</Tag>
       <Rating rating={rating} isEditable setRating={setRating} />
+      <Input placeholder={"Name"} />
+      <TextArea placeholder={"Text area"} />
     </>
   );
 };
